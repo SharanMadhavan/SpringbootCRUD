@@ -23,6 +23,7 @@ import com.sb.crud.repository.EmployeeRepository;
 public class EmployeeController {
 	
 	public static String messsage ="Details saved successfully";
+	public static String updated ="Details updated successfully";
 	@Autowired
 	private EmployeeRepository employeeRepository;
 	
