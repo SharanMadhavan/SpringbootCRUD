@@ -35,7 +35,9 @@ public class EmployeeController {
 	
 	@PostMapping("/employees")
 	public Employee addEmployee( @RequestBody Employee employee) {
+		System.out.println("employee saved sucessfully");
 		return employeeRepository.save(employee);
+		
 	}
 	// fing by Id api
 	
@@ -55,6 +57,7 @@ public class EmployeeController {
 		employ.setEmail(employee.getEmail());
 		
 		Employee empl = employeeRepository.save(employ);
+		System.out.println("employee saved sucessfully");
 		
 		return ResponseEntity.ok(empl);
 	}
