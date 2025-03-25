@@ -22,6 +22,7 @@ import com.sb.crud.repository.EmployeeRepository;
 @RequestMapping("/api/v1")
 public class EmployeeController {
 	
+	public static String messsage ="Details saved successfully";
 	@Autowired
 	private EmployeeRepository employeeRepository;
 	
@@ -35,7 +36,7 @@ public class EmployeeController {
 	
 	@PostMapping("/employees")
 	public Employee addEmployee( @RequestBody Employee employee) {
-		System.out.println("employee saved sucessfully");
+		System.out.println(messsage);
 		return employeeRepository.save(employee);
 		
 	}
@@ -57,7 +58,7 @@ public class EmployeeController {
 		employ.setEmail(employee.getEmail());
 		
 		Employee empl = employeeRepository.save(employ);
-		System.out.println("employee saved sucessfully");
+		System.out.println(messsage);
 		
 		return ResponseEntity.ok(empl);
 	}
